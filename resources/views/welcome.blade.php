@@ -98,8 +98,7 @@
         <script src="/assets/jqueryui/jquery-ui.min.js"></script>
         <script>
             $("document").ready(function(){
-                var ids = [];
-
+                
                 setInterval(function(){//Функция каждую 1 сек вызывает функцию getNews()
                     setInterval(function(){
                         getNews();
@@ -110,7 +109,7 @@
                     $.ajax({
                         url: '{{ url('welcome')  }}',
                         type: 'GET',
-                        data:{_token: $("input[name=_token]").val()},
+                        
                         success: function(data){
                             var data = jQuery.parseJSON(data);
                             $(".bbb").text(data);
