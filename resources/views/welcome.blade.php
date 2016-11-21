@@ -83,9 +83,10 @@
                 <div class="title m-b-md">
                     Rate
                 </div>
-
-                
-                <div class="bbb" style="height: 20px; width: 50px; color: red;">ok</div>
+                <div class="rate" style="height: 20px; width: 50px; color: red; display:inline-block;">rate  </div>
+				<span>
+                    RUB за 1 USD
+                </span>
             </div>
         </div>
         <!-- Scripts -->
@@ -99,7 +100,7 @@
         <script>
             $("document").ready(function(){
                 
-                setInterval(function(){//Функция каждую 1 сек вызывает функцию getNews()
+                setInterval(function(){//Функция каждую 3 сек вызывает функцию getNews()
                     setInterval(function(){
                         getNews();
                     }, 3000);
@@ -112,7 +113,7 @@
                         
                         success: function(data){
                             var data = jQuery.parseJSON(data);
-                            $(".bbb").text(data);
+                            $(".rate").text(data);
 
                         }
                     });
